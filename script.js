@@ -1,5 +1,4 @@
 const containerEl = document.querySelector(".container")
-console.log(containerEl)
 
 for (let i = 0; i < 17; i++) {
     const rowEl = document.createElement("div")
@@ -14,7 +13,14 @@ for (let i = 0; i < 17; i++) {
 containerEl.appendChild(rowEl)
 }
 
+const allSquares = document.querySelectorAll(".square")
+console.log(allSquares)
 
+for (square of allSquares) {
+    square.addEventListener("mouseenter", changeColor)
+}
 
-
-
+function changeColor() {
+    this.classList.add("hover-effect")
+    this.removeEventListener("mouseenter", changeColor)
+}

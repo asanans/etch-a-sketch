@@ -22,3 +22,7 @@ h1 {
     border-left: 2px solid darkslategray;
     flex: 1;
 }
+
+.hover-effect {
+    background-color: gold;
+}

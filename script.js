@@ -1,6 +1,7 @@
 const containerEl = document.querySelector(".container")
 
 let numberSquaresPerSide = 16
+const colors = ["gold", "salmon", "yellowgreen", "skyblue"]
 
 createSquare()
 
@@ -31,8 +32,13 @@ function createSquare() {
 
 }
 
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * 4)]
+}
+
 function changeColor() {
-    this.classList.add("hover-effect")
+    // this.classList.add("hover-effect")
+    this.style.backgroundColor = getRandomColor()
     this.removeEventListener("mouseenter", changeColor)
 }
 
